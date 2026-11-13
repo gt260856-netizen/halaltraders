@@ -1,0 +1,547 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=18705920-be17-4aec-89e0-19d216cf094c
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#071c3d">
+<meta name="description" content="Shariah Trader India - Explore stock market education, chart reading, market basics and risk awareness in Hindi and English.">
+<title>Shariah Trader India | Market Education</title>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '4530181247193769');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=4530181247193769&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+:root{
+  --navy:#071c3d;
+  --navy2:#0b2b53;
+  --gold:#f0c67c;
+  --ice:#d7efff;
+  --white:#ffffff;
+  --muted:#b7cce0;
+}
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%}
+body{
+  overflow:hidden;
+  background:var(--navy);
+  color:var(--white);
+  font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+.page{
+  height:100vh;
+  height:100svh;
+  height:100dvh;
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:8px;
+  overflow:hidden;
+  background:
+    radial-gradient(ellipse at 10% 12%,#3569aa55,transparent 52%),
+    radial-gradient(ellipse at 90% 88%,#e5b66820,transparent 45%),
+    linear-gradient(145deg,#06162e,#0c3056 62%,#071a35);
+}
+.card{
+  width:100%;
+  max-width:465px;
+  height:100%;
+  max-height:920px;
+  min-height:0;
+  padding:clamp(9px,1.5vh,18px) 16px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  align-items:stretch;
+  gap:clamp(3px,.7vh,9px);
+  border:1px solid #b5d6f444;
+  border-radius:22px;
+  background:linear-gradient(160deg,#13365bdc,#091b38f2);
+  box-shadow:0 20px 65px #0007,inset 0 1px 0 #ffffff18;
+  text-align:center;
+}
+.top{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+}
+.logo{
+  width:clamp(58px,9vh,84px);
+  height:clamp(58px,9vh,84px);
+  flex-shrink:0;
+  border:2px solid var(--gold);
+  border-radius:50%;
+  overflow:hidden;
+  display:grid;
+  place-items:center;
+  background:linear-gradient(145deg,#345e86,#10243e);
+  box-shadow:0 0 0 4px #f0c67c16;
+}
+.logo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.logo span{
+  display:none;
+  color:var(--gold);
+  font-size:20px;
+  font-weight:900;
+}
+.brand-block{text-align:left}
+.brand{
+  margin:0;
+  font-size:clamp(18px,5vw,24px);
+  line-height:1.15;
+  font-weight:950;
+  letter-spacing:.4px;
+}
+.brand em{
+  display:block;
+  color:var(--gold);
+  font-style:normal;
+}
+.brand-sub{
+  margin:5px 0 0;
+  font-size:clamp(9px,2.5vw,11px);
+  color:var(--ice);
+  letter-spacing:.6px;
+}
+.line{
+  width:100%;
+  height:1px;
+  background:linear-gradient(90deg,transparent,#f0c67c88,transparent);
+}
+.tag{
+  align-self:center;
+  border:1px solid #f0c67c55;
+  background:#f0c67c12;
+  border-radius:30px;
+  padding:6px 12px;
+  color:#ffe0a5;
+  font-size:clamp(9px,2.6vw,11px);
+  font-weight:800;
+}
+.hero h1{
+  margin:0;
+  font-size:clamp(25px,7vw,36px);
+  font-weight:950;
+  line-height:1.2;
+  letter-spacing:-.5px;
+}
+.hero h1 span{color:var(--gold)}
+.hero h2{
+  margin:6px 0 0;
+  font-size:clamp(13px,3.6vw,17px);
+  font-weight:800;
+  color:#e6f5ff;
+}
+.hero p{
+  margin:8px auto 0;
+  max-width:380px;
+  color:var(--muted);
+  font-size:clamp(10px,2.8vw,12px);
+  line-height:1.5;
+}
+.learn-title{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  text-align:left;
+  font-size:clamp(10px,2.8vw,12px);
+  font-weight:850;
+  color:var(--gold);
+  letter-spacing:.5px;
+}
+.learn-title:after{
+  content:"";
+  height:1px;
+  flex:1;
+  background:#f0c67c3b;
+}
+.learn-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+}
+.learn{
+  min-width:0;
+  border:1px solid #b5d6f42c;
+  border-radius:12px;
+  background:#ffffff09;
+  padding:10px 9px;
+  text-align:left;
+}
+.learn .num{
+  display:inline-block;
+  margin-bottom:5px;
+  font-size:11px;
+  font-weight:900;
+  color:var(--gold);
+}
+.learn b{
+  display:block;
+  font-size:clamp(10px,2.9vw,12px);
+  line-height:1.35;
+}
+.learn small{
+  display:block;
+  margin-top:4px;
+  font-size:clamp(9px,2.4vw,10px);
+  line-height:1.35;
+  color:var(--muted);
+}
+.cta{
+  width:100%;
+  min-height:clamp(58px,9vh,76px);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px 6px;
+  border-radius:14px;
+  background:linear-gradient(110deg,#f2c46f,#ffe3a3,#edb65b);
+  color:#192d45;
+  font-size:clamp(13px,4.1vw,21px);
+  font-weight:950;
+  letter-spacing:-.45px;
+  white-space:nowrap;
+  text-align:center;
+  text-decoration:none;
+  box-shadow:0 0 25px #f0c67c55,0 8px 24px #f0c67c25;
+  animation:glow 2.8s ease-in-out infinite;
+}
+@keyframes glow{
+  0%,100%{box-shadow:0 0 15px #f0c67c55}
+  50%{box-shadow:0 0 32px #f0c67c99}
+}
+.cta:focus-visible{
+  outline:3px solid white;
+  outline-offset:3px;
+}
+.timer{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+}
+.count{
+  width:38px;
+  height:38px;
+  flex-shrink:0;
+  display:grid;
+  place-items:center;
+  border:2px solid #f0c67c66;
+  border-radius:50%;
+  color:var(--gold);
+  background:#f0c67c0c;
+  font-size:17px;
+  font-weight:900;
+  font-variant-numeric:tabular-nums;
+}
+.timer-info{text-align:left}
+.timer-info b{
+  display:block;
+  font-size:clamp(10px,2.8vw,12px);
+}
+.timer-info span{
+  display:block;
+  margin-top:3px;
+  font-size:10px;
+  color:var(--muted);
+}
+.free{
+  margin:0;
+  font-size:clamp(10px,2.7vw,12px);
+  color:#dbeafa;
+}
+.disclaimer{
+  padding:9px 11px;
+  border:1px solid #ffffff2c;
+  border-radius:11px;
+  background:#06172c9c;
+  color:#c4d1dd;
+  text-align:left;
+  font-size:clamp(9px,2.35vw,10px);
+  line-height:1.4;
+}
+.disclaimer p{margin:0}
+.disclaimer p+p{margin-top:5px}
+.disclaimer strong{color:var(--gold)}
+@media(max-height:760px){
+  .card{padding:7px 13px;gap:3px}
+  .logo{width:50px;height:50px}
+  .brand{font-size:17px}
+  .brand-sub{font-size:9px;margin-top:2px}
+  .tag{padding:4px 10px}
+  .hero h1{font-size:24px}
+  .hero h2{margin-top:3px;font-size:12px}
+  .hero p{margin-top:4px;font-size:10px}
+  .learn-grid{gap:5px}
+  .learn{padding:6px 8px}
+  .learn .num{margin-bottom:2px}
+  .learn b{font-size:10px}
+  .learn small{margin-top:2px;font-size:9px}
+  .cta{min-height:52px}
+  .count{width:30px;height:30px;font-size:14px}
+  .disclaimer{padding:6px 8px;font-size:9px;line-height:1.3}
+}
+@media(max-height:600px){
+  .card{border-radius:14px}
+  .logo{width:40px;height:40px}
+  .brand{font-size:14px}
+  .brand-sub{font-size:8px}
+  .tag{font-size:8px}
+  .hero h1{font-size:20px}
+  .hero h2{font-size:10px}
+  .hero p{font-size:9px}
+  .learn-title{font-size:9px}
+  .learn{padding:4px 6px}
+  .learn .num{font-size:9px}
+  .learn b{font-size:9px}
+  .learn small{font-size:8px}
+  .cta{min-height:45px}
+  .free{font-size:9px}
+  .disclaimer{font-size:8px;line-height:1.2}
+}
+@media(prefers-reduced-motion:reduce){
+  .cta{animation:none}
+}
+</style>
+</head>
+
+<body>
+<div class="page">
+<main class="card">
+
+  <header class="top">
+    <div class="logo">
+      <img
+        src="mts.jpg"
+        alt="Shariah Trader India"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span aria-hidden="true">ST</span>
+    </div>
+    <div class="brand-block">
+      <h2 class="brand">
+        SHARIAH TRADER
+        <em>INDIA</em>
+      </h2>
+      <p class="brand-sub">STOCK MARKET EDUCATION</p>
+    </div>
+  </header>
+
+  <div class="line"></div>
+
+  <div class="tag">
+    📚 FREE LEARNING • हिंदी + ENGLISH
+  </div>
+
+  <section class="hero">
+    <h1>
+      Learn Before<br>
+      <span>You Trade.</span>
+    </h1>
+    <h2>शेयर मार्केट को आसान तरीके से समझें</h2>
+    <p>
+      Explore stock market basics, financial concepts
+      and responsible learning through educational
+      content in Hindi and English.
+    </p>
+  </section>
+
+  <div class="learn-title">
+    WHAT YOU CAN EXPLORE
+  </div>
+
+  <section class="learn-grid" aria-label="Learning topics">
+
+    <div class="learn">
+      <span class="num">01 / BASICS</span>
+      <b>शेयर मार्केट की जानकारी</b>
+      <small>Stocks, indices &amp; market fundamentals</small>
+    </div>
+
+    <div class="learn">
+      <span class="num">02 / CHARTS</span>
+      <b>Chart Reading Concepts</b>
+      <small>प्राइस मूवमेंट और चार्ट की समझ</small>
+    </div>
+
+    <div class="learn">
+      <span class="num">03 / RISK</span>
+      <b>रिस्क मैनेजमेंट</b>
+      <small>Risk awareness &amp; capital protection concepts</small>
+    </div>
+
+    <div class="learn">
+      <span class="num">04 / MINDSET</span>
+      <b>Trading Psychology</b>
+      <small>अनुशासन और निर्णय लेने की समझ</small>
+    </div>
+
+  </section>
+
+  <a
+    class="cta"
+    id="joinBtn"
+    href="https://t.me/+bC11kzd_GENiNmI9">
+    JOIN FREE TELEGRAM CHANNEL
+  </a>
+
+  <div class="timer">
+    <span class="count" id="seconds">10</span>
+    <div class="timer-info" id="timerText">
+      <b>Learning Community Opening</b>
+      <span>10 सेकंड में चैनल खुलेगा</span>
+    </div>
+  </div>
+
+  <p class="free">
+    Free to Join • Educational Content • Leave Anytime
+  </p>
+
+  <section class="disclaimer">
+    <p>
+      <strong>Disclaimer:</strong>
+      This content is for general education only,
+      not investment advice or a buy/sell recommendation.
+      Trading and investing involve financial risk.
+      No returns or outcomes are guaranteed.
+    </p>
+    <p>
+      <strong>हिंदी:</strong>
+      यह जानकारी केवल शिक्षा के लिए है।
+      निवेश और ट्रेडिंग में पूंजी हानि का जोखिम है।
+    </p>
+  </section>
+
+</main>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  const destination="https://t.me/+bC11kzd_GENiNmI9";
+  const button=document.getElementById("joinBtn");
+  const seconds=document.getElementById("seconds");
+  const timerText=document.getElementById("timerText");
+
+  const STORAGE_KEY="shariah_trader_subscribe_1138780295183493";
+  const COOLDOWN=30*60*1000;
+
+  let stopped=false;
+  let subscribeSent=false;
+  let interval=null;
+
+  const deadline=performance.now()+10000;
+
+  function stopTimer(){
+    stopped=true;
+    if(interval!==null){
+      clearInterval(interval);
+      interval=null;
+    }
+  }
+
+  function canTrackSubscribe(){
+    if(subscribeSent)return false;
+
+    try{
+      const last=Number(sessionStorage.getItem(STORAGE_KEY));
+
+      if(
+        Number.isFinite(last)&&
+        last>0&&
+        Date.now()-last<COOLDOWN
+      ){
+        return false;
+      }
+    }catch(error){}
+
+    return true;
+  }
+
+  function markSubscribe(){
+    subscribeSent=true;
+
+    try{
+      sessionStorage.setItem(
+        STORAGE_KEY,
+        String(Date.now())
+      );
+    }catch(error){}
+  }
+
+  function updateCountdown(){
+    if(stopped)return;
+
+    const remaining=Math.max(
+      0,
+      Math.ceil((deadline-performance.now())/1000)
+    );
+
+    seconds.textContent=remaining;
+
+    if(remaining===0){
+      stopTimer();
+      timerText.textContent="Opening Telegram Channel...";
+      window.location.assign(destination);
+    }
+  }
+
+  button.addEventListener("click",function(event){
+    if(event.defaultPrevented)return;
+
+    if(
+      event.ctrlKey||
+      event.metaKey||
+      event.shiftKey||
+      event.altKey||
+      (event.button!==0&&event.detail!==0)
+    ){
+      return;
+    }
+
+    stopTimer();
+
+    if(canTrackSubscribe()){
+      markSubscribe();
+
+      try{
+        if(typeof fbq==="function"){
+          fbq("track","Subscribe");
+        }
+      }catch(error){}
+    }
+  });
+
+  interval=setInterval(updateCountdown,200);
+  updateCountdown();
+
+  window.addEventListener("pagehide",stopTimer);
+})();
+</script>
+</body>
+</html>
+<script async src="/.netlify/scripts/hud?variant=public" data-nf-variant="public" data-netlify-site-id="18705920-be17-4aec-89e0-19d216cf094c" data-app-host="app.netlify.com" data-account-tier="free"></script>
